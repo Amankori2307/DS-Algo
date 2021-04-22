@@ -14,5 +14,11 @@ int main(){
     c = 'c';
     cout<<"Size of char is: "<<sizeof(c)<<endl;
 
+    short int si;
+    cout<<"Size of short int is: "<<sizeof(si)<<endl;
+
+    long int li;
+    cout<<"Size of long int is: "<<sizeof(li)<<endl;
+    
     return 0;
 }
