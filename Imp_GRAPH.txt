@@ -1,0 +1,27 @@
+Graph:
+    - Non Linear DS, consisting of nodes & edges | (Vertics and Edges)
+    - Build A Graph
+    - Traverse Graph(BSF, DFS)
+    - cyclyc or not
+    - Shortest Path (BFS, Dijkstra)
+    - Topological sorting
+    - Minimum Spaning Tree(Kruksal, Prim)
+    - Back Tracking(nQueen, Rat and Maze, Knight Tower)
+    - Bellmen Ford
+    - Floyd Warshell
+    - TSP
+    - flood fill
+    - Graph Coloring
+    - Snack and Ladder
+
+
+Application of Graph
+    - Social Media Network
+    - city Road Network
+    - Recedence Constraint
+
+Graph Representaion
+    - Adjescency Matrix
+    - Adjescency List
+
+
