@@ -1,28 +1,45 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
 #include <iostream>
+#include <climits>
+
 using namespace std;
-
-// Smallest Positive Missing number
-void smallestPositiveMissingNo(int arr[], int n){
-
-}
-int main(){
-    #ifndef ONLINE_JUDGE
-        freopen("input.txt", "r", stdin);
-        freopen("output.txt", "w", stdout);
-    #endif 
-
-    int n, s;
-    cin>>n>>s;
-
+// Find minimum missing postive integer
+int main()
+{
+    int n;
+    cin>>n;
+    
     int arr[n];
     for(int i=0; i<n; i++){
         cin>>arr[i];
     }
-    int N = 1e3+2;
+    
+    const int N=1e6+2;
     bool idx[N] = {false};
-    for(int i=0; i<N; i++){
-        cout<<idx[i]<<",  ";
+    
+    for(int i=0; i<n; i++){
+        int item = arr[i];
+        if(item >= 0){
+            idx[item] = true;
+        }
     }
-    smallestPositiveMissingNo(arr, n);
+    int ans = -1;
+    for(int i=0; i<N; i++){
+        int item = idx[i];
+        if(item != true){
+            ans = i;
+            break;
+        }
+    }
+    
+    cout<<ans<<endl;
+        
     return 0;
 }
