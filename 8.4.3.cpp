@@ -1,43 +1,34 @@
-#include <iostream>
-#include <climits>
-
+#include<iostream>
 using namespace std;
 
-
-void longestArithmeticSubarray(int arr[], int n){
-    // For this approach to work there has to be atleast three elements in the array
-
+// Longest Arithmetic Subarray
+// Condition: difference between consecutive elements in subarray should be same
+int longestArithmeticSubarray(int arr[], int n){
     int pd = arr[1] - arr[0];
-    int mx = 2;
-    int curr = 2;
+    int mx = 2, curr = 2;
     int i = 2;
     while(i<n){
         if(pd == arr[i] - arr[i-1]){
             curr++;
         }else{
-            curr = 2;
             pd = arr[i] - arr[i-1];
-        } 
+            curr = 2;
+        }
         mx = max(curr, mx);
         i++;
     }
-    cout<<"\n\n";
-    cout<<mx<<endl;
+    return mx;
 }
 
 int main(){
-    #ifndef ONLINE_JUDGE
-        freopen("input.txt", "r", stdin);
-        freopen("output.txt", "w", stdout);
-    #endif
-
     int n;
     cin>>n;
 
     int arr[n];
-    for(int i = 0; i<n; i++){
+    for(int i=0; i<n; i++){
         cin>>arr[i];
     }
-    longestArithmeticSubarray(arr, n);
+    cout<<longestArithmeticSubarray(arr, n)<<endl;
 
+    return 0;
 }

@@ -4,42 +4,36 @@
 using namespace std;
 
 // Record Breaker
+/* 
+    If Day has maximum visitors so far and 
+    visitior more than visitors on its next 
+    day then it is record breaking day
+*/
 int recordBreakingDays(int arr[], int n){
-    int mx = INT_MIN;
-    int record_breaking_days = 0;
-
-    // If there is only day in the input
-    if(n==0){
-        return 1;
-    }
-
-    for(int i=0; i<n; i++){
-        if(arr[i] > mx && arr[i] > arr[i+1]){
-            record_breaking_days++;
+    int i = 0;
+    int recordBreakingDays = 0;
+    int mx = 0;
+    while(i<n){
+        if((arr[i] > arr[i+1]) && arr[i] > mx){
+            recordBreakingDays++;
         }
-        mx = max(arr[i], mx);
+        mx = max(mx, arr[i]);
+        i++;
     }
-
-    return record_breaking_days;
+    return recordBreakingDays;
 }
 
 int main(){
-    #ifndef ONLINE_JUDGE
-        freopen("input.txt", "r", stdin);
-        freopen("output.txt", "w", stdout);
-    #endif
-
     int n;
     cin>>n;
 
     int arr[n+1];
-    arr[n] = -1; // So that you don't get error while comparing arr[n-1] > arr[n]
+    arr[n] = -1;
 
-
-    for(int i = 0; i<n; i++){
+    for(int i=0; i<n; i++){
         cin>>arr[i];
     }
-    int ans = recordBreakingDays(arr, n);
-    cout<<ans<<endl;
 
+    cout<<recordBreakingDays(arr, n);
+    return 0;
 }

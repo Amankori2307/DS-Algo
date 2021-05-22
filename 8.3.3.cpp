@@ -19,7 +19,7 @@ void insertionSort(int arr[], int n){
         }
     }
     for(int i = 0; i<n; i++){
-        cout<<arr[i]<<", ";
+        cout<<arr[i]<<" ";
     }
 }
 
@@ -39,12 +39,24 @@ void insertionSort2(int arr[], int n){
     }
 }
 
-int main(){
-    #ifndef ONLINE_JUDGE
-        freopen("input.txt", "r", stdin);
-        freopen("output.txt", "w", stdout);
-    #endif
+void insertionSortRev(int arr[], int n){
+    for(int i=1; i<n; i++){
+        int item = arr[i];
+        int j=i-1;
+        while(j>=0 && item<arr[j]){
+            // Shift Item
+            arr[j+1] = arr[j];
+            j--;
+        }
+        arr[j+1] = item;
+    }
+    for(int i=0; i<n; i++){
+        cout<<arr[i]<<" ";
+    }
+    cout<<endl;
+}
 
+int main(){
     int n;
     cin>>n;
 
@@ -53,8 +65,8 @@ int main(){
         cin>>arr[i];
     }
 
-    insertionSort(arr, n);
-    cout<<endl;
-    insertionSort2(arr, n);
+    // insertionSort(arr, n);
+    // insertionSort2(arr, n);
+    insertionSortRev(arr, n);
     return 0;
 }
