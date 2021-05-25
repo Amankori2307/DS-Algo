@@ -1,0 +1,1 @@
+{"name":"Local: 16","url":"c:\\Users\\amank\\OneDrive\\Desktop\\C++\\Programs\\16.2.1.cpp","tests":[{"id":1621732667986,"input":"5\n1 2 3 4 5 ","output":"1"},{"id":1621732917839,"input":"4 \n1 3 4 2","output":"0"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\amank\\OneDrive\\Desktop\\C++\\Programs\\16.2.1.cpp","group":"local","local":true}
