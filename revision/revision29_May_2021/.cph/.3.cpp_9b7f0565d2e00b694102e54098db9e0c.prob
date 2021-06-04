@@ -1,0 +1,1 @@
+{"name":"Local: 3","url":"c:\\Users\\amank\\OneDrive\\Desktop\\C++\\Programs\\revision\\revision29_May_2021\\3.cpp","tests":[{"id":1622253804460,"input":"8 6\n1 2 3 4 5 6 67 89","output":"5"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\amank\\OneDrive\\Desktop\\C++\\Programs\\revision\\revision29_May_2021\\3.cpp","group":"local","local":true}

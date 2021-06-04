@@ -2,11 +2,6 @@
 using namespace std;
 
 int main(){
-    // Code For Input Output
-    #ifndef ONLINE_JUDGE
-        freopen("input.txt", "r", stdin);
-        freopen("output.txt", "w", stdout);
-    #endif
 
     // Greatest Among Three
     
@@ -14,11 +9,12 @@ int main(){
     cin>>a>>b>>c;
 
     if(a>b && a>c)
-        cout<<"A is greatest\n";
+        cout<<a<<endl;
     else if(b > c)
-        cout<<"B is greatest\n";
+        cout<<b<<endl;
     else
-        cout<<"C is greatest\n";
+        cout<<c<<endl;
+
 
     return 0;
 }

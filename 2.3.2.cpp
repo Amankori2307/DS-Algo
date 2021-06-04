@@ -2,11 +2,6 @@
 using namespace std;
 
 int main(){
-    // Code For Input Output
-    #ifndef ONLINE_JUDGE
-        freopen("input.txt", "r", stdin);
-        freopen("output.txt", "w", stdout);
-    #endif
 
     // Odd Or Even
     int num;

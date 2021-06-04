@@ -2,11 +2,6 @@
 using namespace std;
 
 int main(){
-    // Code for input output
-    #ifndef ONLINE_JUDGE
-        freopen("input.txt", "r", stdin);
-        freopen("output.txt", "w", stdout);
-    #endif
 
     // Sum of n numbers
     int n;
@@ -17,6 +12,6 @@ int main(){
         sum += i;
     }
 
-    cout<<"Sum: "<<sum<<endl;
+    cout<<sum<<endl;
     return 0;
 }

@@ -27,7 +27,7 @@ int main(){
     }
 
     // Maximum Circular Subarray Sum
-    // Approach is to find non contributing elemnt and it from and remove it from array
+    // Approach is to find non contributing elemnt and remove it from array
 
     int wrapsum;
     int nowrapsum;
