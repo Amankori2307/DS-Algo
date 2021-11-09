@@ -13,7 +13,7 @@ int linearSearch(int arr[], int n, int key){
 }
 int main(){
 
-    // Progrma To Find Min And Max In An Array
+    // Linear search program
     int n, key;
     cin>>n>>key;
 

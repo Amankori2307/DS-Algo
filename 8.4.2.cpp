@@ -2,7 +2,7 @@
 using namespace std;
 
 
-// Sum of all subarray
+// Print sum of all subarrays
 void sumOfAllSubarray(int arr[], int n){
     for(int i=0; i<n; i++){
         int sum =0;

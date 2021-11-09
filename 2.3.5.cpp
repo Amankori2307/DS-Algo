@@ -2,7 +2,7 @@
 using namespace std;
 
 int main(){
-
+    // Check if characters are upper case or lover case
     char c;
     cin>>c;
 
