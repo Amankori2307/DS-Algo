@@ -1,0 +1,26 @@
+// 8. Print sum of all sub arrays
+
+#include<iostream>
+using namespace std;
+
+void sumOfAllSubArrays(int arr[], int n){
+    for(int i=0; i<n; i++){
+        int sum = 0;
+        for(int j=i; j<n; j++){
+            sum += arr[j];
+            cout<<sum<<" ";
+        }
+    }
+}
+
+int main(){
+    int n;
+    cin>>n;
+    int arr[n];
+    for(int i=0; i<n; i++){
+        cin>>arr[i];
+    }
+
+    sumOfAllSubArrays(arr, n);
+    return 0;
+}

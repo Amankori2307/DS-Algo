@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-// Longest Arithmetic Subarray
+// Longest Arithmetic Subarray(Condition: difference between consecutive elements in subarray should be same)
 // Condition: difference between consecutive elements in subarray should be same
 int longestArithmeticSubarray(int arr[], int n){
     int pd = arr[1] - arr[0];

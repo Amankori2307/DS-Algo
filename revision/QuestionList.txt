@@ -1,0 +1,13 @@
+1. Find Max and Min in array
+2. Write Linear Search program
+3. Write binary search program
+4. Write selection sort program
+5. Write bubble sort program
+6. Write insertion sort program
+7. Max till i
+8. Print sum of all sub arrays
+9. Longest Arithmetic Subarray(Condition: difference between consecutive elements in subarray should be same)
+10. Record Breaker (If Day has maximum visitors so far and visitior more than visitors on its next day then it is record breaking day)
+11. Find repeating element with minimum index
+12. Find sub array with given sum
+13. Find Minimum Missing Positive No
