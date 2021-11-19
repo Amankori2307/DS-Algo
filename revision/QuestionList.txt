@@ -11,3 +11,7 @@
 11. Find repeating element with minimum index
 12. Find sub array with given sum
 13. Find Minimum Missing Positive No
+14. Print all subarray
+15. Maximum subarray sum
+16. Maximum circular subarray sub
+17. Pair sum problem, check if there exists two elements in an array such that their sum is equal to given k.
