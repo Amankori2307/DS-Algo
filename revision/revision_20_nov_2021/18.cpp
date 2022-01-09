@@ -1,4 +1,4 @@
-// Take input in 2d array and print
+// 18. Take input in 2d array and print
 #include<iostream>
 using namespace std;
 
@@ -19,4 +19,5 @@ int main(){
         }
         cout<<endl;
     }
+    return 0;
 }

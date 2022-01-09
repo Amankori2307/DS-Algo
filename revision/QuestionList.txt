@@ -15,3 +15,8 @@
 15. Maximum subarray sum
 16. Maximum circular subarray sub
 17. Pair sum problem, check if there exists two elements in an array such that their sum is equal to given k.
+18. Take input in 2d array and print
+19. Search an element in 2D-Array
+20. Spiral order traversal of 2D-Array
+21. Transpose a 2d-Matrix
+22. Matrix Multiplication

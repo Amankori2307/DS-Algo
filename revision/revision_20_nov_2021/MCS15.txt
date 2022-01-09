@@ -1,0 +1,18 @@
+MCS15
+MCS12
+MCS11
+ECO2
+BCSL22
+BCSL21	
+MCS13
+
+
+
+insert
+select language
+manage debit card
+pin enter
+manage channel
+select 3rd commerce
+select 1st domestic
+select enable
