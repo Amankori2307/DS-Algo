@@ -1,127 +1,88 @@
 /*
-    Problem: Recover BST
+    Lasgest BST in a binary tree
 
-    2 nodes of a BST are swaped. Our task is to restore or correct the BST
+    Problem: Return the size of the largest BST in a binary tree
 
+    Approach:
+        For each node store the following infor
+        1. Min in subtree
+        2. Max in subtree
+        3. subtree size
+        4. size of largest BST
+        5. is BST
 
-    Approach
-        - Inorder of a BST is always sorted
-        - So we can use this propery to tackle this problem once we print inorder of this BST we will get an integer array which
-          no longer sorted because 2 nodes has been swaped
-          
-        - so now we have converted our problem from restoring a BST to restoring a sorted array
-        - 
-
-        Case 1:
-            - Swapped elements are not adjecent to each other
-            e.g. original = {1,2,3,4,5,6,7,8}, after swapping = {1,8,3,4,5,6,7,2};
-        
-            First: previous node where 1st number < previous [8]
-            Mid: node where 1st number < previous [3]
-            Last" 2nd node where 1st number < previous [2]
-
-            - Swap first with last 
-        Case 2:
-            - Swapped elements are adjecent to each other
-            e.g. original = {1,2,3,4,5,6,7,8}, after swapping = {1,2,4,3,5,6,7,8};
-
-            First: previous node where 1st number < previous [4]
-            Mid: node where 1st number < previous [3]
-            Last" 2nd node where 1st number < previous [NULL]
-
-            - Swap mid with first
-
+        Recursively traverse in a bottom up manner & find out the size of largest BST
 */ 
 
+
 #include <iostream>
+#include<climits>
 using namespace std;
 
 struct Node{
     int data;
     Node *left, *right;
-    Node(int val){
+    Node(int val) {
         data = val;
-        left = NULL;
         right = NULL;
+        left = NULL;
     }
 };
-void calcPointers(Node* root, Node **first, Node **mid, Node **last, Node **prev){
-    if(root == NULL){
-        return;
+
+
+struct Info{
+    int size;
+    int max;
+    int min;
+    int ans;
+    bool isBST;
+    
+};
+
+
+
+Info largestBSTInBT(Node* root){
+    if(root == NULL) {
+        return {0, INT_MIN, INT_MAX, 0, true};
+    } 
+    else if(root->left == NULL && root->right == NULL){
+        return {1, root->data, root->data, 1, true};    
     }
 
-    calcPointers(root->left, first, mid, last, prev);
-    if(*prev && root->data < (*prev)->data){
-        if(!*first){
-            *first = *prev;
-            *mid = root;
-        }else{
-            *last = root;
-        }
+    Info leftInfo = largestBSTInBT(root->left);
+    Info rightInfo = largestBSTInBT(root->right);
+    
+    Info curr;
+    curr.size = (1 + leftInfo.size + rightInfo.size);
+    if(leftInfo.isBST && rightInfo.isBST && root->data > leftInfo.max && root->data < rightInfo.min){
+        curr.isBST = true;
+        curr.max = max(root->data,max(rightInfo.max, leftInfo.max));
+        curr.min = min(root->data,min(rightInfo.max, leftInfo.max));
+        curr.ans = curr.size;
+        return curr;
     }
-    *prev = root;
-    calcPointers(root->right, first, mid, last, prev);
-}
-
-void swap(int *a, int* b){
-    int temp = *a;
-    *a = *b;
-    *b = temp;
-}
- 
-void restoreBst(Node* root){
-    Node *first, *mid, *last, *prev;
-    first = NULL;
-    mid = NULL;
-    last = NULL;
-    prev = NULL;
-    calcPointers(root, &first, &mid, &last, &prev);
-    // Case 1
-    if(first && last){
-        swap(&(first->data), &(last->data));
-    }
-    // case 2
-    else if(first != NULL && mid != NULL){
-        swap(&(first->data), &(mid->data));
-    }
-
-}
-
-void printInorder(Node* root){
-    if(root ==  NULL) return;
-    printInorder(root->left);
-    cout<<root->data<<" ";
-    printInorder(root->right);
-}
-
-void printPreorder(Node* root){
-    if(root == NULL) return;
-    cout<<root->data<<" ";
-    printPreorder(root->left);
-    printPreorder(root->right);
+    curr.isBST = false;
+    curr.ans = max(leftInfo.ans, rightInfo.ans);
+    return curr;
 }
 
 int main() {
     /*
-                6
-               / \
-              9   3
-             / \   \
-            1   4   13
+                10
+               /  \
+              5    15
+             /     / \
+            6     11  20
+            Ans: 3
+    */ 
 
-    */
-    Node* root = new Node(6);
-    root->left = new Node(9);
-    root->right = new Node(3);
-    root->left->left = new Node(1);
-    root->left->right = new Node(4);
-    root->right->right = new Node(14);
+    Node* root = new Node(10);
+    root->left = new Node(5);
+    root->left->left = new Node(6);
+    root->right = new Node(15);
+    root->right->left = new Node(11);
+    root->right->right = new Node(20);
 
-    printInorder(root);
-    cout<<endl;
-    restoreBst(root);
-    printInorder(root);
-    cout<<endl;
-    
+    cout<<"Size of largest BST: "<<largestBSTInBT(root).ans<<endl;
     return 0;
 }
