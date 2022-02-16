@@ -1,5 +1,5 @@
 /*
-    BST Challenge 1(Place elemets to maximise minimum distance)
+    Binary Search Challenge 1(Place elemets to maximise minimum distance)
     Problem: Given is an array with n elements that represents n positions along a straight line, Find K elements such
              that the minimum distance between any 2 elements is the maximum possible
 
