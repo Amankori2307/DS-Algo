@@ -24,6 +24,8 @@
             a) If key to be searched lies in range from arr[mid+1]
             to arr[h], recur for arr[mid+1..h].
             b) Else recur for arr[l..mid] 
+
+        https://www.geeksforgeeks.org/search-an-element-in-a-sorted-and-pivoted-array/
 */
 
 
