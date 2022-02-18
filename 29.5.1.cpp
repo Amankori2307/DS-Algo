@@ -6,13 +6,16 @@
            neighbours of itself
 
     Corner Cases:
-        - Use binary search analyze indices from 1 to n-1
-        - Compute mid and for each mid check if arr[mid] is a peak element
-        - if mid is not a peak element and arr[mid-1] is greater then the arr[mid] then
-          then left subarray must contain a peak element that is why we should call findPeak for left subarray
-        - if mid is not a peak element and arr[mid+11] is greater then the arr[mid] then
-          then right subarray must contain a peak element that is why we should call findPeak for rught subarray
-    
+        - If input array is sorted in strictly increasing order, the last element is always a peak element. For example, 50 is peak element in {10, 20, 30, 40, 50}.
+        - If the input array is sorted in strictly decreasing order, the first element is always a peak element. 100 is the peak element in {100, 80, 60, 50, 20}.
+        - If all elements of input array are same, every element is a peak element. 
+
+    Approach
+        - Create two variables, l and r, initialize l = 0 and r = n-1
+        - Iterate the steps below till l <= r, lowerbound is less than the upperbound
+        - Check if the mid value or index mid = (l+r)/2, is the peak element or not, if yes then print the element and terminate.
+        - Else if the element on the left side of the middle element is greater then check for peak element on the left side, i.e. update r = mid – 1
+        - Else if the element on the right side of the middle element is greater then check for peak element on the right side, i.e. update l = mid + 1
 */
 
 
