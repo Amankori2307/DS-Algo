@@ -9,7 +9,7 @@
     on all the non-leaf elements of the heap. i.e. ‘heapify’ uses recursion.
 */ 
 
-
+// Heap Sort Program
 #include <iostream>
 using namespace std;
 
@@ -59,11 +59,14 @@ void printArray(int arr[], int n){
 
 
 int main() {
-    int arr[] = {12, 11, 13, 5, 6, 7};
-    int n = sizeof(arr) / sizeof(arr[0]);
+    int n;
+    cin >> n;
+    int arr[n];
+    for(int i=0; i<n; i++){
+        cin >> arr[i];
+    }
 
     heapSort(arr, n);
-    cout << "Sorted arrray is \n";
     printArray(arr, n);
 
 }
