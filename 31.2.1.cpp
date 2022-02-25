@@ -1,4 +1,5 @@
 /*
+    PROGRAM: HEAP SORT
     How to “heapify” a tree?
 
     The process of reshaping a binary tree into a Heap data structure is known as ‘heapify’. A binary tree is a tree 
