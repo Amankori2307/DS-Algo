@@ -32,7 +32,7 @@ using namespace std;
 
 
 signed main() {
-    priority_queue<int, vi> pq; // max heap
+    priority_queue<int, vd> pq; // max heap
     pq.push(5);
     pq.push(4);
     pq.push(9);
@@ -40,7 +40,7 @@ signed main() {
     cout << pq.top() << endl;
 
 
-    priority_queue<int, vi, greater<int>> pq2; // min heap
+    priority_queue<int, vd, greater<int>> pq2; // min heap
     pq2.push(10);
     pq2.push(11);
     pq2.push(9);
