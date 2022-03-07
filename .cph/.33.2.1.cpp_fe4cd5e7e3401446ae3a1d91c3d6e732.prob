@@ -1,0 +1,1 @@
+{"name":"Local: 33","url":"c:\\Users\\amank\\Projects\\DS-Algo\\33.2.1.cpp","tests":[{"id":1646613372327,"input":"10 \n1 2 5 10 20 50 100 200 500 2000\n768","output":"7"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\amank\\Projects\\DS-Algo\\33.2.1.cpp","group":"local","local":true}
