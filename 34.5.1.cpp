@@ -13,13 +13,14 @@ vector<int> adj[N];
 
 void DFS(int node){
     v[node] = true;
+    // cout << node << " ";  // Proorder
     vector<int> :: iterator it;
     for(it=adj[node].begin(); it!=adj[node].end(); it++){
         if(v[*it] != true){
             DFS(*it);
         }
     }    
-    cout << node << " ";
+    // cout << node << " "; // pOstorder
 }
 
 
