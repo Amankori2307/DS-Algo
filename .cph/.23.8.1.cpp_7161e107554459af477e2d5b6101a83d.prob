@@ -1,1 +1,0 @@
-{"name":"Local: 23","url":"c:\\Users\\amank\\OneDrive\\Desktop\\C++\\Programs\\23.8.1.cpp","tests":[{"id":1623116788408,"input":"(a-b/c)*(a/k-l)","output":"*-a/bc-/akl"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\amank\\OneDrive\\Desktop\\C++\\Programs\\23.8.1.cpp","group":"local","local":true}

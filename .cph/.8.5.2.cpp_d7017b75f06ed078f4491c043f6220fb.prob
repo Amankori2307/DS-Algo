@@ -1,1 +1,0 @@
-{"name":"Local: 8","url":"c:\\Users\\amank\\OneDrive\\Desktop\\C++\\Programs\\8.5.2.cpp","tests":[{"id":1621132519966,"input":"8  29\n12 34 56 34 56 9 8 12","output":"6 8"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\amank\\OneDrive\\Desktop\\C++\\Programs\\8.5.2.cpp","group":"local","local":true}
