@@ -15,9 +15,9 @@
 #include<vector>
 using namespace std;
 
-bool isCycle(int src, vector<vector<int>> &adj, vector<bool> visited, int parent){
+bool isCycle(int src, vector<vector<int> > &adj, vector<bool> visited, int parent){
     visited[src] = true;
-    for(auto i : adj[src]){
+    for(auto i: adj[src] ) {
         if(i != parent){
             if(visited[i]){
                 return true;
