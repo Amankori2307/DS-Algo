@@ -2,3 +2,5 @@
 .vscode
 .cph
 a.out.dSYM
+*.bin
+a.out
