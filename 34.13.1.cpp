@@ -88,6 +88,6 @@ int main(){
             union_sets(u,v);
         }
     }
-    cout << size << endl;`
+    cout << size << endl;
     return 0;
 }
