@@ -1,7 +1,33 @@
 /*
     Problem: Cycle Detection In Undirected Graph
 
-
+    TEST:
+        TEST1:
+            Input:
+                    3 3
+                    0 1
+                    1 2
+                    2 0
+            Output:
+                    1
+        TEST2:
+            Input:
+                    4 3
+                    0 1
+                    1 2
+                    2 3
+            Output:
+                    0
+        TEST3:
+            Input:
+                    5 5
+                    0 1
+                    1 2
+                    2 3
+                    3 4
+                    4 0
+            Output:
+                    1
 */ 
 
 #include<iostream>
