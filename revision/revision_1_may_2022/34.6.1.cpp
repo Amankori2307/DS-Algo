@@ -18,6 +18,10 @@
 
     APPROACH
         Calclated indegree || Use queue 
+
+    TESTS:
+        TEST1:
+
 */ 
 
 #include<iostream>
@@ -25,23 +29,27 @@
 #include<queue>
 using namespace std;
 
+vector<vector<int>> adj;
+queue<int> q;
+vector<int> indeg;
 
 int main(){
-    int n, m; cin >> n >> m;
-    vector<vector<int>> adj(n);
-    vector<int> indeg(n, 0);
+    int n, m;
+    cin >> n >> m;
+    adj = vector<vector<int>>(n);
+    indeg = vector<int>(n, 0);
 
     for(int i=0; i<m; i++){
-        int x, y; cin >> x >> y;
-        adj[x].push_back(y);
-        indeg[y]++;
+        int u, v;
+        cin >> u >> v;
+        adj[u].push_back(v);
+        indeg[v]++;
     }
 
-    queue<int> q;
+
     for(int i=0; i<n; i++){
-        if(indeg[i] == 0){
+        if(indeg[i] == 0)
             q.push(i);
-        }
     }
 
     while(!q.empty()){
@@ -49,11 +57,10 @@ int main(){
         q.pop();
         cout << node << " ";
 
-
-        for(auto it: adj[node]){
-            indeg[it]--;
-            if(indeg[it] == 0){
-                q.push(it);
+        for(auto childNode: adj[node]){
+            indeg[childNode]--;
+            if(indeg[childNode] == 0){
+                q.push(childNode);
             }
         }
     }
